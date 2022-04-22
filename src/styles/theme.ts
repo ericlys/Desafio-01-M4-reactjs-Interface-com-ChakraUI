@@ -9,6 +9,10 @@ export const theme = extendTheme({
       600: "#47585B"
     }
   },
+  fonts:{
+    heading: 'Poppins',
+    body: 'Poppins',
+  },
   styles: {
     global: {
       body:{
