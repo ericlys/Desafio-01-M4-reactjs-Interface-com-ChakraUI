@@ -20,7 +20,7 @@ export function Banner(){
             color="white" 
             fontSize="4xl"
             fontWeight="500" 
-            w={426}
+            maxWidth={426}
           >
             5 Continentes,<br/> infinitas possibilidades.
           </Text>
@@ -28,7 +28,7 @@ export function Banner(){
             mt={"20px"}
             fontSize="20px"
             color="light.500"
-            w={525}
+            maxWidth={525}
           >
             Chegou a hora de tirar do papel a viagem que você sempre sonhou. 
           </Text>
