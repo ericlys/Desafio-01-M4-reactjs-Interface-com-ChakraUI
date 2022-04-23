@@ -3,7 +3,6 @@ import { Box, Image, SimpleGrid, Text } from "@chakra-ui/react";
 export function Banner(){
   return(
     <Box 
-      // h={368.21} 
       h={335}
       bgImage="https://images.unsplash.com/photo-1495344517868-8ebaf0a2044a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=653&q=80"
       bgRepeat="no-repeat"
