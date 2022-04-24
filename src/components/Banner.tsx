@@ -14,6 +14,7 @@ export function Banner(){
           display="flex"
           justifyContent="center"
           flexDir="column"
+          px="2"
           mx="auto"
         >
           <Text 
