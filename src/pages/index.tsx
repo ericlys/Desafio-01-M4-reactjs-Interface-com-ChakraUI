@@ -1,6 +1,6 @@
 import { Box, Divider, Flex, Text } from "@chakra-ui/react";
 import { Banner } from "../components/Banner";
-import { Carrouseu } from "../components/Carrouseu";
+import { Carrousel } from "../components/Carrousel";
 import { Header } from "../components/Header";
 import { TravelType } from "../components/TravelType";
 
@@ -52,7 +52,7 @@ export default function Home() {
         mt="3.25rem"
         mb={10}
       >
-        <Carrouseu/>
+        <Carrousel/>
       </Flex>
 
 

@@ -8,9 +8,9 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 
 
-import styles from './carrouseu.module.scss';
+import styles from './carrousel.module.scss';
 
-export function Carrouseu(){
+export function Carrousel(){
   return(
     <Swiper 
       pagination={true} 
