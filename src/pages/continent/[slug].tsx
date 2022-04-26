@@ -1,5 +1,6 @@
 import { Box, Flex, GridItem, HStack, Text, VStack, Grid, SimpleGrid } from "@chakra-ui/react"
 import { useRouter } from "next/router"
+import { CityCard } from "../../components/CityCard"
 import { Header } from "../../components/Header"
 import { Info } from "../../components/Info"
 
@@ -7,14 +8,11 @@ export default function Continent(){
   const router = useRouter()
   const { slug } = router.query
   return(
-    <Flex
-      direction="column"
-      h="100vh"
-    >
+    <Box>
       <Header backHref="/"/>
 
       <Box
-        flex="1"
+        h="500px"
         maxHeight="500px"
         bgImage="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=820&q=80"
         bgSize="cover"
@@ -79,15 +77,27 @@ export default function Continent(){
               spacingX='45px'
               spacingY='48px'
               >
-              <Box bg='tomato' height='80px'></Box>
-              <Box bg='tomato' height='80px'></Box>
-              <Box bg='tomato' height='80px'></Box>
-              <Box bg='tomato' height='80px'></Box>
-              <Box bg='tomato' height='80px'></Box>
-              <Box bg='tomato' height='80px'></Box>
+              <Box height='279px'>
+                <CityCard/>
+              </Box>
+              <Box height='279px'>
+                <CityCard/>
+              </Box>
+              <Box height='279px'>
+                <CityCard/>
+              </Box>
+              <Box height='279px'>
+                <CityCard/>
+              </Box>
+              <Box height='279px'>
+                <CityCard/>
+              </Box>
+              <Box height='279px'>
+                <CityCard/>
+              </Box>
             </SimpleGrid>
         </Box>
       </VStack>
-    </Flex>
+    </Box>
   )
 }
