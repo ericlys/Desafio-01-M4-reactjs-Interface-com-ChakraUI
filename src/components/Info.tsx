@@ -1,11 +1,13 @@
-import { Flex, Text } from "@chakra-ui/react";
+import {  Flex, HStack, Icon, Text, Tooltip} from "@chakra-ui/react";
+import { RiInformationLine } from "react-icons/ri";
 
 interface InfoProps{
   amount: number;
   text: string;
+  tooltipInfo?: string;
 }
 
-export function Info({ amount, text }: InfoProps){
+export function Info({ amount, text, tooltipInfo }: InfoProps){
   return (
     <Flex
       flexDir="column"
@@ -20,12 +22,23 @@ export function Info({ amount, text }: InfoProps){
       >
         {amount}
       </Text>
-      <Text
-        fontWeight="semibold"
-        fontSize={24}
-      >
-        {text}
-      </Text>
+      <HStack spacing="5px">
+        <Text
+          fontWeight="semibold"
+          fontSize={24}
+        >
+          {text}
+        </Text>
+
+        { !!tooltipInfo && (
+          <Tooltip label={tooltipInfo}>
+            <span>
+             <Icon color="rgba(153, 153, 153, 0.5);" as={RiInformationLine} fontSize="md" />
+            </span>
+         </Tooltip>
+        )}
+
+      </HStack>
     </Flex>
   )
 }

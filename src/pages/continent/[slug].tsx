@@ -53,7 +53,7 @@ export default function Continent(){
           <HStack spacing={10}>
             <Info amount={50} text="países"/>
             <Info amount={60} text="línguas"/>
-            <Info amount={27} text="cidades +100"/>
+            <Info amount={27} text="cidades +100" tooltipInfo="veja a lista completa logo abaixo"/>
           </HStack>
           </GridItem>
         </Grid>
