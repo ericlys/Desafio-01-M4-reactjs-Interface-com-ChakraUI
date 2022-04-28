@@ -1,6 +1,10 @@
 import { Box, Image, SimpleGrid, Text } from "@chakra-ui/react";
 
-export function Banner(){
+interface BannerProps {
+  amountContinents?: number;
+}
+
+export function Banner( { amountContinents = 5 }: BannerProps){
   return(
     <Box 
       h={335}
@@ -23,7 +27,7 @@ export function Banner(){
             fontWeight="500" 
             maxWidth={426}
           >
-            5 Continentes,<br/> infinitas possibilidades.
+            {amountContinents} Continentes,<br/> infinitas possibilidades.
           </Text>
           <Text 
             mt={"20px"}

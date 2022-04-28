@@ -1,0 +1,40 @@
+{
+  "continents":[
+    {
+      "id": 1,
+      "image": "https://images.unsplash.com/photo-1521747116042-5a810fda9664?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+      "name": "América do Norte",
+      "known": "Porção setentrional do continente Américano."
+    },
+    {
+      "id": 2,
+      "image": "https://images.unsplash.com/photo-1483729558449-99ef09a8c325?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+      "name": "América do Sul",
+      "known": "Parte meridional do continente Américano."
+    },
+    {
+      "id": 3,
+      "image": "https://images.unsplash.com/photo-1594973782943-3314fe063f68?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80",
+      "name": "Ásia",
+      "known": "O maior e mais populoso continente."
+    },
+    {
+      "id": 4,
+      "image": "https://images.unsplash.com/photo-1575999502951-4ab25b5ca889?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80",
+      "name": "África",
+      "known": "O continente que fica no centro do planeta."
+    },
+    {
+      "id": 5,
+      "image": "https://images.unsplash.com/photo-1529180184525-78f99adb8e98?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+      "name": "Europa",
+      "known": "O continente mais antigo."
+    },
+    {
+      "id": 6,
+      "image": "https://images.unsplash.com/photo-1623982143585-39bd7ec29663?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+      "name": "Oceania",
+      "known": "O menor continente do mundo."
+    }
+  ]
+}
