@@ -1,10 +1,10 @@
 import { Grid, GridItem, Heading, Image, Stack, Text } from "@chakra-ui/react";
 
 interface CityCardProps {
-  country?: string;
-  capital?: string;
-  cityImage?: string;
-  flagImage?: string;
+  country: string;
+  capital: string;
+  cityImage: string;
+  flagImage: string;
 }
 
 export function CityCard({ country, capital, cityImage, flagImage }: CityCardProps){
@@ -21,7 +21,7 @@ export function CityCard({ country, capital, cityImage, flagImage }: CityCardPro
         rowSpan={1}
         colSpan={2}
         borderRadius={"4px 4px 0 0"}
-        bgImage="https://images.unsplash.com/photo-1529260830199-42c24126f198?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1176&q=80"
+        bgImage={cityImage}
         bgSize={"cover"}
       />
       <GridItem 
@@ -39,7 +39,7 @@ export function CityCard({ country, capital, cityImage, flagImage }: CityCardPro
             fontSize="xl"
             fontWeight="semibold"
             >
-              Roma
+              {capital}
           </Heading>
           <Text
             fontFamily="Barlow"
@@ -47,7 +47,7 @@ export function CityCard({ country, capital, cityImage, flagImage }: CityCardPro
             fontWeight="semibold"
             color="dark.200"
             >
-            Itália
+            {country}
           </Text>
         </Stack>
       </GridItem>
@@ -61,7 +61,7 @@ export function CityCard({ country, capital, cityImage, flagImage }: CityCardPro
         paddingRight={6}
       >
         <Image 
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Flag_of_Italy.svg/800px-Flag_of_Italy.svg.png" 
+          src={flagImage}
           alt="flat" 
           w="30px"
           h="30px"

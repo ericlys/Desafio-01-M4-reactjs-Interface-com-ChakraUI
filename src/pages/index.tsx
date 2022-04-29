@@ -1,17 +1,29 @@
 import { Box, Divider, Flex, Text } from "@chakra-ui/react";
 import { GetStaticProps } from "next";
-import internal from "stream";
 import { Banner } from "../components/Banner";
 import { Carrousel } from "../components/Carrousel";
 import { Header } from "../components/Header";
 import { TravelType } from "../components/TravelType";
 import { api } from "../services/api";
 
+type Country = {
+  id: number,
+  name: string,
+  flag: string,
+  capital: string,
+  image: string,
+}
+
 interface Continent {
   id: number;
-  image: string;
   name: string;
   known: string;
+  text: string;
+  numberOfCountries: number;
+  numberOfLanguages: number;
+  carrouselImage: string;
+  jumbotronImage: string;
+  countries: Country[];
 }
 
 interface HomeProps {

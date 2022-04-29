@@ -9,12 +9,13 @@ import "swiper/css/navigation";
 
 
 import styles from './carrousel.module.scss';
+import Link from "next/link";
 
 interface Continent {
   id: number;
-  image: string;
   name: string;
   known: string;
+  carrouselImage: string;
 }
 
 interface CarroselProps {
@@ -35,36 +36,39 @@ export function Carrousel({ continents }: CarroselProps){
 
       {continents.map(continent => (
         <SwiperSlide key={continent.id}>
-        <Flex
-          bgImage={continent.image}
-          bgSize="cover"
-          w="100%" 
-          h="100%"
-        >
-          <Flex
-            bg="#1C140159"
-            flex="1"
-            flexDir="column"
-            alignItems="center"
-            justifyContent="center"
-          >
-            <Text
-              color="white" 
-              fontSize="5xl"
-              fontWeight="bold"
+          <Link href={`/continent/${continent.id}`} passHref>
+            <Flex
+              bgImage={continent.carrouselImage}
+              bgSize="cover"
+              w="100%" 
+              h="100%"
+              cursor="pointer"
             >
-              {continent.name}
-            </Text>              
-            <Text
-              color="white" 
-              fontSize="2xl"
-              fontWeight="bold"
-            >
-              {continent.known}
-            </Text>              
-          </Flex>
-        </Flex>
-      </SwiperSlide>
+              <Flex
+                bg="#1C140159"
+                flex="1"
+                flexDir="column"
+                alignItems="center"
+                justifyContent="center"
+                >
+                <Text
+                  color="white" 
+                  fontSize="5xl"
+                  fontWeight="bold"
+                  >
+                  {continent.name}
+                </Text>              
+                <Text
+                  color="white" 
+                  fontSize="2xl"
+                  fontWeight="bold"
+                  >
+                  {continent.known}
+                </Text>              
+              </Flex>
+            </Flex>
+          </Link>
+        </SwiperSlide>
       ))}     
   
     </Swiper>

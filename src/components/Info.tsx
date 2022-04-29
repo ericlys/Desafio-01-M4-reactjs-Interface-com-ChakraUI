@@ -33,7 +33,7 @@ export function Info({ amount, text, tooltipInfo }: InfoProps){
         { !!tooltipInfo && (
           <Tooltip label={tooltipInfo}>
             <span>
-             <Icon color="rgba(153, 153, 153, 0.5);" as={RiInformationLine} fontSize="md" />
+             <Icon cursor="pointer" color="rgba(153, 153, 153, 0.5);" as={RiInformationLine} fontSize="md" />
             </span>
          </Tooltip>
         )}
