@@ -14,9 +14,9 @@ export function Header({ backHref }: HeaderProps){
       as="header"
       w="100%"
       maxWidth={1440}
-      h="24"
+      h={["12", "24"]}
       mx="auto"
-      px="6"
+      px={["4","6"]}
     >
       <SimpleGrid flex="1" columns={3}>
       <Box
@@ -27,7 +27,7 @@ export function Header({ backHref }: HeaderProps){
       {!!backHref && (
         <Link href={backHref} passHref>
           <ChakraLink display="flex" alignItems="center">
-            <Icon as={RiArrowLeftSLine} fontSize="32" />
+            <Icon as={RiArrowLeftSLine}  fontSize={["16","32"]} />
           </ChakraLink>
         </Link>
       )}
@@ -38,7 +38,7 @@ export function Header({ backHref }: HeaderProps){
        alignItems="center"
        justifyContent="center"
       >
-        <Image w={184} h="auto"src="/images/logo.svg" alt="logo"/>
+        <Image w={[81, 184]} h="auto"src="/images/logo.svg" alt="logo"/>
       </Box>
       </SimpleGrid>
     </Flex>
