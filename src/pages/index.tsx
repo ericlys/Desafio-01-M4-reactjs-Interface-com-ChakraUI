@@ -3,7 +3,7 @@ import { GetStaticProps } from "next";
 import { Banner } from "../components/Banner";
 import { Carrousel } from "../components/Carrousel";
 import { Header } from "../components/Header";
-import { TravelType } from "../components/TravelType";
+import { TravelTypes } from "../components/TravelTypes";
 import { api } from "../services/api";
 
 type Country = {
@@ -35,7 +35,7 @@ export default function Home( { continents }: HomeProps) {
   return (
     <Flex direction="column">
       <Header/>
-      <Box h={368.21}>
+      <Box maxH={[163, 368.21]}>
         <Banner amountContinents={continents.length} />
       </Box>
 
@@ -44,20 +44,10 @@ export default function Home( { continents }: HomeProps) {
         w="100%"
         maxWidth={1240}
         mx="auto"
-        mt={114}
+        mt={["36px", 114]}
       >
-      <Flex
-        flex="1"
-        h={145}
-        px="10"
-        justifyContent="space-between"
-       >
-        <TravelType srcImage="/images/cocktail.svg" text="Vida noturna" />
-        <TravelType srcImage="/images/surf.svg" text="praia" />
-        <TravelType srcImage="/images/building.svg" text="moderno" />
-        <TravelType srcImage="/images/museum.svg" text="clássico" />
-        <TravelType srcImage="/images/earth.svg" text="e mais..." />
-      </Flex>
+    
+      <TravelTypes />
 
       <Divider 
         borderColor="gray.600" 
