@@ -54,24 +54,15 @@ export default function Home( { continents }: HomeProps) {
         border={2}
         w={90}
         mx="auto"
-        mt="20"
-        mb="3.25rem"
+        mt={["2","20"]}
+        mb={["6", "3.25rem"]}
       />
 
-      <Text textAlign="center" fontSize="4xl" fontWeight={500}>
+      <Text textAlign="center" fontSize={["xl", "4xl"]} fontWeight={500}>
         Vamos nessa?<br/>Então escolha seu continente
       </Text>
 
-      <Flex
-        flex="1"
-        maxWidth={1240}
-        maxHeight={480}
-        mt="3.25rem"
-        mb={10}
-      >
-        <Carrousel continents={continents} />
-      </Flex>
-
+      <Carrousel continents={continents} />
 
       </Flex>
 

@@ -15,3 +15,17 @@ span.swiper-pagination-bullet {
     background: #ffba08;
   }
 }
+
+@media (max-width: 850px) {
+  div.swiper-button-prev::after,
+  div.swiper-button-next::after {
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  span.swiper-pagination-bullet {
+    opacity: 1;
+    width: .5rem;
+    height: .5rem;
+  }  
+}

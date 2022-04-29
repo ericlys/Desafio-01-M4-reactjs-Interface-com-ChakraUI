@@ -24,53 +24,62 @@ interface CarroselProps {
 
 export function Carrousel({ continents }: CarroselProps){
   return(
-    <Swiper 
-      autoplay={{
-        delay: 60*60*2,
-        disableOnInteraction: false,
-      }}
-      pagination={true} 
-      navigation={true}
-      modules={[Autoplay, Navigation, Pagination]}
-      className={styles.container}>
+    <Flex
+      height={[375, 480]}
+      maxW="1240px"
+      mt="3.25rem"
+      mb={[5, 10]}
+    >
+      <Swiper 
+        autoplay={{
+          delay: 60*60*2,
+          disableOnInteraction: false,
+        }}
+        pagination={true} 
+        navigation={true}
+        modules={[Autoplay, Navigation, Pagination]}
+        className={styles.container}>
 
-      {continents.map(continent => (
-        <SwiperSlide key={continent.id}>
-          <Link href={`/continent/${continent.id}`} passHref>
-            <Flex
-              bgImage={continent.carrouselImage}
-              bgSize="cover"
-              w="100%" 
-              h="100%"
-              cursor="pointer"
-            >
+        {continents.map(continent => (
+          <SwiperSlide key={continent.id}>
+            <Link href={`/continent/${continent.id}`} passHref>
               <Flex
-                bg="#1C140159"
-                flex="1"
-                flexDir="column"
-                alignItems="center"
-                justifyContent="center"
-                >
-                <Text
-                  color="white" 
-                  fontSize="5xl"
-                  fontWeight="bold"
+                bgImage={continent.carrouselImage}
+                bgSize="cover"
+                w="100%" 
+                h="100%"
+                cursor="pointer"
+              >
+                <Flex
+                  bg="#1C140159"
+                  height="100%"
+                  width="100%"
+                  flexDir="column"
+                  alignItems="center"
+                  justifyContent="center"
                   >
-                  {continent.name}
-                </Text>              
-                <Text
-                  color="white" 
-                  fontSize="2xl"
-                  fontWeight="bold"
-                  >
-                  {continent.known}
-                </Text>              
+                  <Text
+                    color="white" 
+                    fontSize={["2xl","5xl"]}
+                    fontWeight="bold"
+                    >
+                    {continent.name}
+                  </Text>              
+                  <Text
+                    color="white" 
+                    fontSize={["sm","2xl"]}
+                    maxW={["190", "100%"]}
+                    fontWeight="bold"
+                    >
+                    {continent.known}
+                  </Text>              
+                </Flex>
               </Flex>
-            </Flex>
-          </Link>
-        </SwiperSlide>
-      ))}     
-  
-    </Swiper>
+            </Link>
+          </SwiperSlide>
+        ))}     
+    
+      </Swiper>
+    </Flex>
   )
 }
