@@ -11,21 +11,21 @@ export function Info({ amount, text, tooltipInfo }: InfoProps){
   return (
     <Flex
       flexDir="column"
-      alignItems="center"
+      alignItems={["", "center"]}
       justifyContent="center"
       lineHeight={"10"}
     >
       <Text
         fontWeight="semibold"
-        fontSize={48}
+        fontSize={[24, 48]}
         color="yellow.300"
       >
         {amount}
       </Text>
       <HStack spacing="5px">
         <Text
-          fontWeight="semibold"
-          fontSize={24}
+          fontWeight={["regular","semibold"]}
+          fontSize={[18, 24]}
         >
           {text}
         </Text>
